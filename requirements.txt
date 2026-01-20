@@ -8,3 +8,11 @@ pymupdf
 python-dotenv
 openai
 langchain-openai
+huggingface_hub
+langchain-huggingface
+# torch
+# transformers
+# accelerate
+# sentencepiece
+# protobuf
+# scipy
