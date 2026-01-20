@@ -24,6 +24,6 @@ class PlotData(BaseModel):
 
 
 class DocumentExtraction(BaseModel):
-    global_elevation: Optional[str] = Field(None, description="Elevation applying to all lots if global")
-    global_notes: Optional[str] = Field(None, description="Notes applying to entire document")
+    # global_elevation: Optional[str] = Field(None, description="Elevation applying to all lots if global")
+    # global_notes: Optional[str] = Field(None, description="Notes applying to entire document")
     plots: List[PlotData] = Field(..., description="One entry per detected lot block")

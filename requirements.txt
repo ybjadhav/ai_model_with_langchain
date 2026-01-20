@@ -6,3 +6,5 @@ langchain-google-genai
 pillow
 pymupdf
 python-dotenv
+openai
+langchain-openai

@@ -13,7 +13,7 @@ extractor = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global extractor
-    print("--- Startup: Loading Google Gemini Service ---")
+    print("--- Startup: Loading Service ---")
     try:
         extractor = DocumentExtractor()
     except Exception as e:
@@ -26,7 +26,7 @@ app = FastAPI(title="Quickplot Extraction API", lifespan=lifespan)
 @app.get("/")
 async def root():
     status = "active" if extractor else "inactive"
-    return {"status": status, "service": "LangChain + Gemini"}
+    return {"status": status, "service": "LangChain Service"}
 
 @app.post("/extract")
 async def extract_plot_data(file: UploadFile = File(...)):

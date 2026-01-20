@@ -87,8 +87,10 @@ from app.domain.schemas import DocumentExtraction, PlotData
 
 class DocumentExtractor:
     def __init__(self):
-        from app.infrastructure.gemini_service import GeminiService
-        self.ai = GeminiService()
+        # from app.infrastructure.gemini_service import GeminiService
+        # self.ai = GeminiService()
+        from app.infrastructure.openai_service import OpenAIService
+        self.ai = OpenAIService()
 
     def _pil_to_base64_content(self, img: Image.Image):
         buffered = io.BytesIO()
